@@ -1,0 +1,125 @@
+:root {
+    --primary: rgb(238, 222, 232);
+    --secondary: rgb(224, 10, 146);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-brands {
+    color: rgb(224, 10, 146);
+}
+
+.row, .column {
+    display: flex;
+    
+}
+
+.row {
+    justify-content: center;
+}
+.column {
+    flex-direction: column;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* custom styles header */
+
+header {
+    padding: 9px 5%;
+    background-color: var(--primary)
+}
+
+header h2, header nav i {
+    color:rgb(224, 10, 146);
+}
+
+header nav i {
+    font-size: 1.5rem;
+    padding: 0 2px;
+    margin: 0 10px;
+}
+
+/* content styles */
+
+h1.main-header {
+    text-align: center;
+    margin: 15px 0;
+    color: var(--secondary)
+}
+
+.search {
+    width: 350px;
+    margin: 30px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    
+}
+
+.search::placeholder {
+    color: var(--secondary);
+    text-align: center;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 0 5%;
+}
+
+main .movie-item {
+    border: 1px solid var(--primary);
+    padding: 10px;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     
+
+}
+
+/* select all children apart from last*/
+main .movie-item > *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+main .movie-item p {
+    color: white;
+    font-size: .85rem;
+    line-height: 1.3;
+}
+
+main .movie-item a {
+    color: var(--primary);
+    border-bottom: 1px dashed var(--secondary);
+}
+
+h3 {
+    color: rgb(243, 208, 231)
+}
+
+.instruction {
+    text-align: center;
+    color: gray;
+}
